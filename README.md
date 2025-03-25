@@ -26,8 +26,10 @@ To run it locally, just launch the server with `npm run dev`.
 Ruby isn’t a language I’m deeply experienced with, but I REALLY enjoyed coding in Ruby. I’ve read articles for few years about Ruby’s philosophy and was already familiar with its syntax, but I was surprised by how much I enjoyed writing in the “Ruby way” (making use of blocks, `.inject()`, modules, minimal imports, function less than 10 lines, etc).  
 
 The code works, and I’ve handled a few edge cases to ensure errors are properly managed when:  
-- The JSON file does not exist  
-- The JSON file isn’t valid  
+- the JSON file does not exist  
+- the JSON file isn’t valid  
+- the input file is not specified
+- the output file name is not specified, which then use the default file name `output.csv` 
 
 ### Things That Could Be Improved  
 
