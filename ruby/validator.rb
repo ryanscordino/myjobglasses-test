@@ -1,9 +1,11 @@
+require 'json'
+
 # Helper to valide files
 module Validator
   module_function
 
   def file_valid?(file)
-    if file and File.exist?(file)
+    if file && File.exist?(file)
       json?(File.read(file))
     else
       puts 'The input file does not exist'
