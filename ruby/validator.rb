@@ -4,7 +4,7 @@ require 'json'
 module Validator
   module_function
 
-  def file_valid?(file)
+  def json_file_valid?(file)
     if file && File.exist?(file)
       json?(File.read(file))
     else
