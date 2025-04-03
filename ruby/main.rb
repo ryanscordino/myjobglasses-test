@@ -3,7 +3,7 @@ require 'csv'
 require './validator'
 require './utils'
 
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   return unless Validator.json_file_valid?(ARGV[0])
 
   input = File.read(ARGV[0])
