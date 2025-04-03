@@ -61,6 +61,7 @@ export default function Page() {
   function updateSearchParams(updates: Record<string, string>) {
     const params = new URLSearchParams(searchParams.toString())
 
+
     Object.entries(updates).forEach(([key, value]) => {
       if (value && value.trim() !== '') {
         params.set(key, value.trim())
@@ -207,7 +208,7 @@ export default function Page() {
               <PaginationItem>
                 <PaginationPrevious
                   onClick={() => handlePageChange(Number(currentPage) - 1)}
-                  className={Number(currentPage) <= 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  className={Number(currentPage) <= 1 ? "pointer-events-none opacity-20" : "cursor-pointer"}
                 />
               </PaginationItem>
               <PaginationItem>
@@ -216,7 +217,7 @@ export default function Page() {
               <PaginationItem>
                 <PaginationNext
                   onClick={() => handlePageChange(Number(currentPage) + 1)}
-                  className={Number(currentPage) >= (info.info?.pages || 0) ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  className={Number(currentPage) >= (info.info?.pages || 0) ? "pointer-events-none opacity-20" : "cursor-pointer"}
                 />
               </PaginationItem>
             </PaginationContent>
