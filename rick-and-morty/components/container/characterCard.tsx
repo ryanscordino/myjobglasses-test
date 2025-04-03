@@ -14,7 +14,7 @@ export const CharacterCard = ({ character }: { character: Character }) => {
                 {
                     character.image &&
                     <div className="h-32 w-full relative">
-                        <Image src={character.image} className="shadow-xl border border-zinc-100/80 shadow-zinc-300/20" objectFit="cover" alt={`Image of ${character.name}`} fill />
+                        <Image src={character.image} className="shadow-xl border border-zinc-100/80 shadow-zinc-300/20" alt={`Image of ${character.name}`} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill />
                     </div>
                 }
                 <div className="flex flex-col gap-2 py-2">
